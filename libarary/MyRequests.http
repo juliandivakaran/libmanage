@@ -6,9 +6,9 @@ POST http://localhost:5213/todos
 Content-Type: application/json
 
 {
-    "bookid": 1,
-    "author": "jubnlian",
-    "description": "romantic nsdsoval",
+    "bookid": 3,
+    "author": "julian divagaran",
+    "description": "web spider",
     "isCompleted": false
 }
 
@@ -19,3 +19,7 @@ GET http://localhost:5213/todos/2
 
 ###Delete
 DELETE  http://localhost:5213/todos/2
+
+
+###
+GET http://localhost:5213/tasks/1
