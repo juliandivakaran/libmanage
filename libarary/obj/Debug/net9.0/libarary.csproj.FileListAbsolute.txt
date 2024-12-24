@@ -26,3 +26,4 @@ C:\Users\user\Desktop\library\libarary\obj\Debug\net9.0\refint\libarary.dll
 C:\Users\user\Desktop\library\libarary\obj\Debug\net9.0\libarary.pdb
 C:\Users\user\Desktop\library\libarary\obj\Debug\net9.0\libarary.genruntimeconfig.cache
 C:\Users\user\Desktop\library\libarary\obj\Debug\net9.0\ref\libarary.dll
+C:\Users\user\Desktop\library\libarary\obj\Debug\net9.0\libarary.sourcelink.json

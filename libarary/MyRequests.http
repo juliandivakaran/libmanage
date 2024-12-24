@@ -1,1 +1,21 @@
-GET http://localhost:5213
+GET http://localhost:5213/todos
+
+
+###
+POST http://localhost:5213/todos
+Content-Type: application/json
+
+{
+    "bookid": 1,
+    "author": "jubnlian",
+    "description": "romantic nsdsoval",
+    "isCompleted": false
+}
+
+
+###
+GET http://localhost:5213/todos/2
+
+
+###Delete
+DELETE  http://localhost:5213/todos/2
