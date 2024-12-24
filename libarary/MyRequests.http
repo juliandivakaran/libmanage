@@ -6,11 +6,11 @@ POST http://localhost:5213/todos
 Content-Type: application/json
 
 {
-    "bookid": 3,
-    "author": "julian divagaran",
-    "description": "web spider",
-    "isCompleted": false
+    "BookId": 34,
+    "Author": "julian divagaran",
+    "Description": "hellow"
 }
+
 
 
 ###
