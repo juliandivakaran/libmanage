@@ -6,7 +6,7 @@ POST http://localhost:5213/todos
 Content-Type: application/json
 
 {
-    "BookId": 34,
+    "BookId": 31,
     "Author": "julian divagaran",
     "Description": "hellow"
 }
@@ -14,12 +14,16 @@ Content-Type: application/json
 
 
 ###
-GET http://localhost:5213/todos/2
+GET http://localhost:5213/todos/38
 
 
 ###Delete
-DELETE  http://localhost:5213/todos/2
+DELETE  http://localhost:5213/todos/38
+
+//###
+//DELETE  http://localhost:5213/tasks/38
+
 
 
 ###
-GET http://localhost:5213/tasks/1
+GET http://localhost:5213/tasks/38

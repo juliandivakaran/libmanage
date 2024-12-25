@@ -29,23 +29,39 @@ app.Use(async (context, next) =>
 app.MapGet("/todos", (ITaskService service) => service.GetTodos());
 
 // GET endpoint to fetch a todo by ID
-app.MapGet("/todos/{id}", (int BookId, ITaskService service) =>
+app.MapGet("/todos/{BookId}", (int BookId, ITaskService service) =>
 {
     var targetTodo = service.GetTodoById(BookId);
     return targetTodo is null
-        ? Results.NotFound() // Use Results helper for NotFound
+        ? Results.NotFound($"This book with BookId {BookId} does not exist") // Use Results helper for NotFound
+        : Results.Ok(targetTodo); // Use Results helper for Ok
+});
+app.MapGet("/tasks/{BookId}", (int BookId, ITaskService service) =>
+{
+    var targetTodo = service.GetTodoById(BookId);
+    return targetTodo is null
+        ? Results.NotFound(targetTodo) // Use Results helper for NotFound
         : Results.Ok(targetTodo); // Use Results helper for Ok
 });
 
 // POST endpoint to create a new todo
 app.MapPost("/todos", (Todo task,ITaskService service) =>
 {
-     if (todos.Any(t => t.BookId == task.BookId))
+    try
     {
-        return Results.Conflict($"A task with BookId {task.BookId} already exists.");
+        service.AddTodo(task);
+        return Results.Created($"/todos/{task.BookId}", task); // Return 201 Created
     }
-    service.AddTodo(task);
-    return Results.Created($"/todos/{task.BookId}", task); // Use Results helper for Created
+    catch (InvalidOperationException ex)
+    {
+        return Results.Conflict(ex.Message); // Return 409 Conflict
+    }
+    // if (todos.Any(t => t.BookId == task.BookId))
+    //{
+     //   return Results.Conflict($"A task with BookId {task.BookId} already exists.");
+    //}
+    //service.AddTodo(task);
+    //return Results.Created($"/todos/{task.BookId}", task); // Use Results helper for Created
 });
 //.AddEndpointFilter(async(context, next)=>{
  //   var taskArgument = context.GetArgument<Todo>(0);
@@ -65,10 +81,18 @@ app.MapPost("/todos", (Todo task,ITaskService service) =>
 //}); 
 
 
-app.MapDelete("/todos/{id}", (int BookId, ITaskService service) =>
+app.MapDelete("/todos/{BookId}", (int BookId, ITaskService service) =>
 {
-    service.DeleteById(BookId);
+    try
+    {
+        service.DeleteById(BookId);
     return Results.NoContent();
+    }
+    catch(InvalidOperationException ex)
+    {
+        return Results.NotFound(ex.Message);
+    }
+    
 });
 
 app.Run();
@@ -93,17 +117,27 @@ class InMemoryTaskService : ITaskService
 
     public Todo AddTodo(Todo task)
     {
+        if (_todos.Any(t => t.BookId == task.BookId))
+        {
+            throw new InvalidOperationException($"A task with BookId {task.BookId} already exsist");
+        }
         _todos.Add(task);
         return task;
     }
 
     public void DeleteById(int BookId)
     {
-        _todos.RemoveAll(task => BookId == task.BookId);
+        var todoToDelete = _todos.SingleOrDefault(t => t.BookId == BookId);
+        if (todoToDelete == null){
+            throw new InvalidOperationException($"this Book is not there{BookId}");
+        }
+        _todos.Remove(todoToDelete);
     }
 
     public Todo? GetTodoById(int BookId)
     {
+        //var todoSearch = _todos.SingleOrDefault(t => t.BookId == BookId);
+        
         return _todos.SingleOrDefault(t => BookId == t.BookId);
     }
 
