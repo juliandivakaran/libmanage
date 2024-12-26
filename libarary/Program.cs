@@ -2,15 +2,22 @@ using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Rewrite;
 using Microsoft.AspNetCore.Builder;
 using System.Text.Json;
+using Microsoft.AspNetCore.StaticFiles;
+using libarary.Models;
+using Microsoft.EntityFrameworkCore;
 
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddSingleton<ITaskService>(new InMemoryTaskService());
+builder.Services.AddDirectoryBrowser();
+builder.Services.AddDbContext<bookDBContext>(options => options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 var app = builder.Build();
 var todos = new List<Todo>();
 
+app.UseDefaultFiles();
+app.UseStaticFiles();
 app.UseRewriter(new RewriteOptions().AddRedirect("tasks/(.*)", "todos/$1"));
 app.Use(async (context, next) =>
 {
