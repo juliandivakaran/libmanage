@@ -5,11 +5,6 @@ GET http://localhost:5213/todos
 POST http://localhost:5213/todos
 Content-Type: application/json
 
-{
-    "BookId": 31,
-    "Author": "julian divagaran",
-    "Description": "hellow"
-}
 
 
 

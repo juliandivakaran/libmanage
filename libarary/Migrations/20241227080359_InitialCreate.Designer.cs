@@ -3,15 +3,15 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using libarary.Models;
+using libarary.Data;
 
 #nullable disable
 
 namespace libarary.Migrations
 {
-    [DbContext(typeof(bookDBContext))]
-    [Migration("20241226061617_Initial")]
-    partial class Initial
+    [DbContext(typeof(AppDbContext))]
+    [Migration("20241227080359_InitialCreate")]
+    partial class InitialCreate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -19,7 +19,7 @@ namespace libarary.Migrations
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "9.0.0");
 
-            modelBuilder.Entity("Todo", b =>
+            modelBuilder.Entity("libarary.Models.Book", b =>
                 {
                     b.Property<int>("BookId")
                         .ValueGeneratedOnAdd()
@@ -35,26 +35,7 @@ namespace libarary.Migrations
 
                     b.HasKey("BookId");
 
-                    b.ToTable("Todos");
-                });
-
-            modelBuilder.Entity("libarary.RpgCharacter", b =>
-                {
-                    b.Property<int>("BookId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
-
-                    b.Property<string>("Author")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("Description")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
-                    b.HasKey("BookId");
-
-                    b.ToTable("RpgCharacters");
+                    b.ToTable("Books");
                 });
 #pragma warning restore 612, 618
         }
