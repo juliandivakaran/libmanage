@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "7Vi3P3R8rmqoO0/7awk6pWjPa1qwjG2pf1KI+ND4atA=",
+  "Hash": "6fgYccorBGvP59OHWHC7A/1wDsp4oxNWG2xU8vVLcnI=",
   "Source": "libarary",
   "BasePath": "_content/libarary",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "libarary\\wwwroot",
       "Source": "libarary",
-      "ContentRoot": "C:\\Users\\user\\Desktop\\library\\libarary\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\user\\Desktop\\librarym\\libmanage\\libarary\\wwwroot\\",
       "BasePath": "_content/libarary",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\user\\Desktop\\library\\libarary\\obj\\Debug\\net9.0\\compressed\\cz6hlmby39-ps7v0oif3d.gz",
+      "Identity": "C:\\Users\\user\\Desktop\\librarym\\libmanage\\libarary\\obj\\Debug\\net9.0\\compressed\\cz6hlmby39-ps7v0oif3d.gz",
       "SourceId": "libarary",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\user\\Desktop\\library\\libarary\\obj\\Debug\\net9.0\\compressed\\",
+      "ContentRoot": "C:\\Users\\user\\Desktop\\librarym\\libmanage\\libarary\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "_content/libarary",
       "RelativePath": "index#[.{fingerprint=ps7v0oif3d}]?.html.gz",
       "AssetKind": "All",
@@ -28,20 +28,20 @@
       "AssetRole": "Alternative",
       "AssetMergeBehavior": "",
       "AssetMergeSource": "",
-      "RelatedAsset": "C:\\Users\\user\\Desktop\\library\\libarary\\wwwroot\\index.html",
+      "RelatedAsset": "C:\\Users\\user\\Desktop\\librarym\\libmanage\\libarary\\wwwroot\\index.html",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
       "Fingerprint": "u6ran0sy4i",
       "Integrity": "2qDkJpxL59ibXZce5mJ9JoHv1uR83Ezk8V0SE2JsRZk=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\user\\Desktop\\library\\libarary\\wwwroot\\index.html"
+      "OriginalItemSpec": "C:\\Users\\user\\Desktop\\librarym\\libmanage\\libarary\\wwwroot\\index.html"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\library\\libarary\\obj\\Debug\\net9.0\\compressed\\s4uehjj2hb-stk1kd6jk9.gz",
+      "Identity": "C:\\Users\\user\\Desktop\\librarym\\libmanage\\libarary\\obj\\Debug\\net9.0\\compressed\\s4uehjj2hb-stk1kd6jk9.gz",
       "SourceId": "libarary",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\user\\Desktop\\library\\libarary\\obj\\Debug\\net9.0\\compressed\\",
+      "ContentRoot": "C:\\Users\\user\\Desktop\\librarym\\libmanage\\libarary\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "_content/libarary",
       "RelativePath": "app#[.{fingerprint=stk1kd6jk9}]?.js.gz",
       "AssetKind": "All",
@@ -49,20 +49,20 @@
       "AssetRole": "Alternative",
       "AssetMergeBehavior": "",
       "AssetMergeSource": "",
-      "RelatedAsset": "C:\\Users\\user\\Desktop\\library\\libarary\\wwwroot\\app.js",
+      "RelatedAsset": "C:\\Users\\user\\Desktop\\librarym\\libmanage\\libarary\\wwwroot\\app.js",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
       "Fingerprint": "69egg61vae",
       "Integrity": "KmQwe1FwFqsJE8ZXwTNZRVUBtHQRjoqa6ULrlIGn3RE=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\user\\Desktop\\library\\libarary\\wwwroot\\app.js"
+      "OriginalItemSpec": "C:\\Users\\user\\Desktop\\librarym\\libmanage\\libarary\\wwwroot\\app.js"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\library\\libarary\\wwwroot\\app.js",
+      "Identity": "C:\\Users\\user\\Desktop\\librarym\\libmanage\\libarary\\wwwroot\\app.js",
       "SourceId": "libarary",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\user\\Desktop\\library\\libarary\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\user\\Desktop\\librarym\\libmanage\\libarary\\wwwroot\\",
       "BasePath": "_content/libarary",
       "RelativePath": "app#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -80,10 +80,10 @@
       "OriginalItemSpec": "wwwroot\\app.js"
     },
     {
-      "Identity": "C:\\Users\\user\\Desktop\\library\\libarary\\wwwroot\\index.html",
+      "Identity": "C:\\Users\\user\\Desktop\\librarym\\libmanage\\libarary\\wwwroot\\index.html",
       "SourceId": "libarary",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\user\\Desktop\\library\\libarary\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\user\\Desktop\\librarym\\libmanage\\libarary\\wwwroot\\",
       "BasePath": "_content/libarary",
       "RelativePath": "index#[.{fingerprint}]?.html",
       "AssetKind": "All",
@@ -104,7 +104,7 @@
   "Endpoints": [
     {
       "Route": "app.js",
-      "AssetFile": "C:\\Users\\user\\Desktop\\library\\libarary\\obj\\Debug\\net9.0\\compressed\\s4uehjj2hb-stk1kd6jk9.gz",
+      "AssetFile": "C:\\Users\\user\\Desktop\\librarym\\libmanage\\libarary\\obj\\Debug\\net9.0\\compressed\\s4uehjj2hb-stk1kd6jk9.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
@@ -127,7 +127,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 27 Dec 2024 05:54:20 GMT"
+          "Value": "Sat, 28 Dec 2024 08:35:12 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -159,7 +159,7 @@
     },
     {
       "Route": "app.js",
-      "AssetFile": "C:\\Users\\user\\Desktop\\library\\libarary\\wwwroot\\app.js",
+      "AssetFile": "C:\\Users\\user\\Desktop\\librarym\\libmanage\\libarary\\wwwroot\\app.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -180,7 +180,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 27 Dec 2024 05:54:20 GMT"
+          "Value": "Sat, 28 Dec 2024 08:35:12 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -196,7 +196,7 @@
     },
     {
       "Route": "app.js.gz",
-      "AssetFile": "C:\\Users\\user\\Desktop\\library\\libarary\\obj\\Debug\\net9.0\\compressed\\s4uehjj2hb-stk1kd6jk9.gz",
+      "AssetFile": "C:\\Users\\user\\Desktop\\librarym\\libmanage\\libarary\\obj\\Debug\\net9.0\\compressed\\s4uehjj2hb-stk1kd6jk9.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -217,7 +217,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 27 Dec 2024 05:54:20 GMT"
+          "Value": "Sat, 28 Dec 2024 08:35:12 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -241,7 +241,7 @@
     },
     {
       "Route": "app.stk1kd6jk9.js",
-      "AssetFile": "C:\\Users\\user\\Desktop\\library\\libarary\\obj\\Debug\\net9.0\\compressed\\s4uehjj2hb-stk1kd6jk9.gz",
+      "AssetFile": "C:\\Users\\user\\Desktop\\librarym\\libmanage\\libarary\\obj\\Debug\\net9.0\\compressed\\s4uehjj2hb-stk1kd6jk9.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
@@ -264,7 +264,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 27 Dec 2024 05:54:20 GMT"
+          "Value": "Sat, 28 Dec 2024 08:35:12 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -304,7 +304,7 @@
     },
     {
       "Route": "app.stk1kd6jk9.js",
-      "AssetFile": "C:\\Users\\user\\Desktop\\library\\libarary\\wwwroot\\app.js",
+      "AssetFile": "C:\\Users\\user\\Desktop\\librarym\\libmanage\\libarary\\wwwroot\\app.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -325,7 +325,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 27 Dec 2024 05:54:20 GMT"
+          "Value": "Sat, 28 Dec 2024 08:35:12 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -349,7 +349,7 @@
     },
     {
       "Route": "app.stk1kd6jk9.js.gz",
-      "AssetFile": "C:\\Users\\user\\Desktop\\library\\libarary\\obj\\Debug\\net9.0\\compressed\\s4uehjj2hb-stk1kd6jk9.gz",
+      "AssetFile": "C:\\Users\\user\\Desktop\\librarym\\libmanage\\libarary\\obj\\Debug\\net9.0\\compressed\\s4uehjj2hb-stk1kd6jk9.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -370,7 +370,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 27 Dec 2024 05:54:20 GMT"
+          "Value": "Sat, 28 Dec 2024 08:35:12 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -402,7 +402,7 @@
     },
     {
       "Route": "index.html",
-      "AssetFile": "C:\\Users\\user\\Desktop\\library\\libarary\\obj\\Debug\\net9.0\\compressed\\cz6hlmby39-ps7v0oif3d.gz",
+      "AssetFile": "C:\\Users\\user\\Desktop\\librarym\\libmanage\\libarary\\obj\\Debug\\net9.0\\compressed\\cz6hlmby39-ps7v0oif3d.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
@@ -425,7 +425,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 27 Dec 2024 09:57:06 GMT"
+          "Value": "Sat, 28 Dec 2024 08:35:12 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -457,7 +457,7 @@
     },
     {
       "Route": "index.html",
-      "AssetFile": "C:\\Users\\user\\Desktop\\library\\libarary\\wwwroot\\index.html",
+      "AssetFile": "C:\\Users\\user\\Desktop\\librarym\\libmanage\\libarary\\wwwroot\\index.html",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -478,7 +478,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 27 Dec 2024 09:57:06 GMT"
+          "Value": "Sat, 28 Dec 2024 08:35:12 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -494,7 +494,7 @@
     },
     {
       "Route": "index.html.gz",
-      "AssetFile": "C:\\Users\\user\\Desktop\\library\\libarary\\obj\\Debug\\net9.0\\compressed\\cz6hlmby39-ps7v0oif3d.gz",
+      "AssetFile": "C:\\Users\\user\\Desktop\\librarym\\libmanage\\libarary\\obj\\Debug\\net9.0\\compressed\\cz6hlmby39-ps7v0oif3d.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -515,7 +515,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 27 Dec 2024 09:57:06 GMT"
+          "Value": "Sat, 28 Dec 2024 08:35:12 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -539,7 +539,7 @@
     },
     {
       "Route": "index.ps7v0oif3d.html",
-      "AssetFile": "C:\\Users\\user\\Desktop\\library\\libarary\\obj\\Debug\\net9.0\\compressed\\cz6hlmby39-ps7v0oif3d.gz",
+      "AssetFile": "C:\\Users\\user\\Desktop\\librarym\\libmanage\\libarary\\obj\\Debug\\net9.0\\compressed\\cz6hlmby39-ps7v0oif3d.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
@@ -562,7 +562,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 27 Dec 2024 09:57:06 GMT"
+          "Value": "Sat, 28 Dec 2024 08:35:12 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -602,7 +602,7 @@
     },
     {
       "Route": "index.ps7v0oif3d.html",
-      "AssetFile": "C:\\Users\\user\\Desktop\\library\\libarary\\wwwroot\\index.html",
+      "AssetFile": "C:\\Users\\user\\Desktop\\librarym\\libmanage\\libarary\\wwwroot\\index.html",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -623,7 +623,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 27 Dec 2024 09:57:06 GMT"
+          "Value": "Sat, 28 Dec 2024 08:35:12 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -647,7 +647,7 @@
     },
     {
       "Route": "index.ps7v0oif3d.html.gz",
-      "AssetFile": "C:\\Users\\user\\Desktop\\library\\libarary\\obj\\Debug\\net9.0\\compressed\\cz6hlmby39-ps7v0oif3d.gz",
+      "AssetFile": "C:\\Users\\user\\Desktop\\librarym\\libmanage\\libarary\\obj\\Debug\\net9.0\\compressed\\cz6hlmby39-ps7v0oif3d.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -668,7 +668,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 27 Dec 2024 09:57:06 GMT"
+          "Value": "Sat, 28 Dec 2024 08:35:12 GMT"
         },
         {
           "Name": "Cache-Control",
