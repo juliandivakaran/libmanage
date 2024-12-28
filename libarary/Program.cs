@@ -2,13 +2,12 @@ using Microsoft.AspNetCore.Rewrite;
 using Microsoft.EntityFrameworkCore;
 using libarary.Data;
 using libarary.Models;
-using libarary.Services;  // <-- Add this line
-
+using libarary.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Register DbContext
-builder.Services.AddDbContext<AppDbContext>(options => 
+builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 // Register TaskService using the database
@@ -16,14 +15,21 @@ builder.Services.AddScoped<ITaskService, DbTaskService>();
 
 builder.Services.AddDirectoryBrowser();
 
+// Add CORS configuration
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAll", policy =>
+    {
+        policy.AllowAnyOrigin()
+              .AllowAnyMethod()
+              .AllowAnyHeader();
+    });
+});
+
 var app = builder.Build();
 
-// Ensure the database is created
-using (var scope = app.Services.CreateScope())
-{
-    var dbContext = scope.ServiceProvider.GetRequiredService<AppDbContext>();
-    dbContext.Database.EnsureCreated();
-}
+// Apply CORS middleware before other middlewares
+app.UseCors("AllowAll");
 
 app.UseDefaultFiles();
 app.UseStaticFiles();
