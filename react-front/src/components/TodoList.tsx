@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { fetchTodos, deleteTodo, updateTodo } from '../services/api';
+import '../components/TodosList.css';  // Import the CSS file
+
 
 type Todo = {
     bookId: number;
@@ -73,7 +75,7 @@ const TodosList: React.FC = () => {
 
     return (
         <div>
-            <h1>Todos List</h1>
+            <h1>Book List</h1>
             <ul>
                 {todos.map((todo) => (
                     <li key={todo.bookId}>
