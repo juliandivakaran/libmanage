@@ -22,3 +22,14 @@ DELETE  http://localhost:5213/todos/38
 
 ###
 GET http://localhost:5213/tasks/38
+
+
+###
+PUT http://localhost:5213/todos/2
+Content-Type: application/json
+
+{
+    "bookId": 8,
+    "author": "Updated Author",
+    "description": "Updated Description"
+}

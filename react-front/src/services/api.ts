@@ -29,3 +29,24 @@ export const postTodo = async (newTodo: Todo): Promise<Todo> => {
         throw new Error('Failed to post new todo');
     }
 };
+
+export const deleteTodo = async (bookId: number): Promise<void> => {
+    try {
+        const response = await axios.delete(`http://localhost:5213/todos/${bookId}`);
+        console.log(`Deleted todo with BookId: ${bookId}`, response);
+    } catch (error) {
+        console.error(`Error deleting todo with BookId ${bookId}:`, error);
+        throw new Error('Failed to delete todo');
+    }
+};
+
+export const updateTodo = async (bookId: number, updatedTodo: Todo): Promise<Todo> => {
+    try {
+        const response = await axios.put<Todo>(`http://localhost:5213/todos/${bookId}`, updatedTodo);
+        console.log(`Updated todo with BookId: ${bookId}`, response.data);
+        return response.data;
+    } catch (error) {
+        console.error(`Error updating todo with BookId ${bookId}:`, error);
+        throw new Error('Failed to update todo');
+    }
+};

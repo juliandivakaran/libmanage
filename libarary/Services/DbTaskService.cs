@@ -12,6 +12,7 @@ public class DbTaskService : ITaskService
         _context = context;
     }
 
+    // Add a new Todo (Book)
     public Todo AddTodo(Todo task)
     {
         var book = new Book
@@ -31,6 +32,7 @@ public class DbTaskService : ITaskService
         return task;
     }
 
+    // Delete a Todo (Book) by ID
     public void DeleteById(int BookId)
     {
         var book = _context.Books.SingleOrDefault(b => b.BookId == BookId);
@@ -43,16 +45,36 @@ public class DbTaskService : ITaskService
         _context.SaveChanges();
     }
 
+    // Get a specific Todo (Book) by ID
     public Todo? GetTodoById(int BookId)
     {
         var book = _context.Books.SingleOrDefault(b => b.BookId == BookId);
         return book == null ? null : new Todo(book.BookId, book.Author, book.Description);
     }
 
+    // Get all Todos (Books)
     public List<Todo> GetTodos()
     {
         return _context.Books
             .Select(b => new Todo(b.BookId, b.Author, b.Description))
             .ToList();
+    }
+
+    // Update a Todo (Book) by ID
+    public Todo? UpdateById(int BookId, Todo updatedTodo)
+    {
+        var existingBook = _context.Books.SingleOrDefault(b => b.BookId == BookId);
+        if (existingBook == null)
+        {
+            return null; // Return null if no matching book is found
+        }
+
+        // Update properties
+        existingBook.Author = updatedTodo.Author;
+        existingBook.Description = updatedTodo.Description;
+
+        _context.SaveChanges();
+
+        return new Todo(existingBook.BookId, existingBook.Author, existingBook.Description);
     }
 }
