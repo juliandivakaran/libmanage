@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { postTodo } from '../services/api';
+import '../components/AddTodo.css';  // Import the CSS file
+
 
 type Todo = {
     bookId: number;
@@ -40,7 +42,7 @@ const AddTodo: React.FC = () => {
 
     return (
         <div>
-            <h2>Add a New Todo</h2>
+            <h2>Add a New Book</h2>
             <form onSubmit={handleSubmit}>
                 <div>
                     <label>
