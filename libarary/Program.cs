@@ -66,6 +66,7 @@ app.MapPost("/todos", (Todo task, ITaskService service) =>
     }
 });
 
+
 app.MapDelete("/todos/{BookId}", (int BookId, ITaskService service) =>
 {
     try
@@ -79,6 +80,21 @@ app.MapDelete("/todos/{BookId}", (int BookId, ITaskService service) =>
     }
 });
 
+app.MapPut("/todos/{BookId}", (int BookId, Todo updatedTodo, ITaskService service) =>
+{
+    try
+    {
+        var updated = service.UpdateById(BookId, updatedTodo);
+        return updated is null
+            ? Results.NotFound($"Book with BookId {BookId} not found.")
+            : Results.Ok(updated);
+    }
+    catch (Exception ex)
+    {
+        return Results.BadRequest(ex.Message);
+    }
+});
+
 app.Run();
 
 public record Todo(int BookId, string Author, string Description);
@@ -89,4 +105,5 @@ interface ITaskService
     List<Todo> GetTodos();
     void DeleteById(int BookId);
     Todo AddTodo(Todo task);
+    Todo? UpdateById(int BookId, Todo updatedTodo);
 }
