@@ -1,78 +1,131 @@
 /* src/styles/TodosList.css */
 
-/* General Todos List Container */
-h1 {
-    text-align: center;
-    font-family: 'Arial', sans-serif;
-    color: #333;
-    margin-bottom: 20px;
+/* General Page Styling */
+body {
+    font-family: 'Inter', Arial, sans-serif; /* Modern sans-serif font */
+    line-height: 1.6;
+    background-color: #f5f7fa; /* Light gray background */
+    color: #333; /* Neutral text color */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* Todo List Styling */
+h1 {
+    text-align: center;
+    font-family: 'Poppins', sans-serif; /* Professional font for headings */
+    color: #2c3e50; /* Dark slate color for contrast */
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+/* Todo List Container */
 ul {
     list-style-type: none;
     padding: 0;
+    margin: 0 auto;
+    max-width: 600px; /* Center the list */
 }
 
 li {
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    padding: 10px;
-    margin-bottom: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff; /* Clean white background */
+    border: 1px solid #e0e0e0; /* Subtle border */
+    border-radius: 12px;
+    padding: 15px 20px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08); /* Subtle shadow */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
+li:hover {
+    transform: translateY(-4px); /* Elevation effect */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.12); /* More pronounced shadow */
+}
+
+/* Buttons */
 button {
-    background-color: #4CAF50;
+    background-color: #007bff; /* Professional blue */
     color: white;
-    padding: 8px 16px;
+    padding: 10px 20px;
     border: none;
-    border-radius: 4px;
+    border-radius: 6px;
     cursor: pointer;
     font-size: 1rem;
-    margin-right: 8px;
+    font-weight: 500;
+    margin-right: 10px;
+    transition: background-color 0.2s ease, transform 0.1s ease;
 }
 
 button:hover {
-    background-color: #45a049;
+    background-color: #0056b3; /* Darker blue for hover */
+    transform: scale(1.05); /* Slight scale effect */
 }
 
 button[type="button"] {
-    background-color: #f44336;
+    background-color: #e74c3c; /* Red for delete buttons */
 }
 
 button[type="button"]:hover {
-    background-color: #e53935;
+    background-color: #c0392b; /* Darker red on hover */
 }
 
 /* Inline Form for Editing Todo */
 form {
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    margin-bottom: 10px;
+    gap: 12px;
+    margin-bottom: 15px;
 }
 
 input[type="number"], input[type="text"], textarea {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    padding: 12px 15px;
+    border: 1px solid #d1d5db; /* Neutral border color */
+    border-radius: 8px;
     font-size: 1rem;
+    background-color: #f9fafb; /* Light background for fields */
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+input:focus, textarea:focus {
+    border-color: #007bff; /* Highlight border on focus */
+    box-shadow: 0 0 6px rgba(0, 123, 255, 0.2); /* Subtle focus glow */
+    outline: none;
 }
 
 textarea {
     resize: vertical;
-    min-height: 80px;
+    min-height: 100px;
 }
 
 form button {
-    background-color: #2196F3;
+    background-color: #28a745; /* Green for save buttons */
 }
 
 form button[type="button"] {
-    background-color: #f44336;
+    background-color: #e74c3c; /* Red for cancel buttons */
 }
 
 form button[type="button"]:hover {
-    background-color: #e53935;
+    background-color: #c0392b; /* Darker red on hover */
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    ul {
+        padding: 0 20px; /* Add padding for smaller screens */
+    }
+
+    li {
+        padding: 15px;
+    }
+
+    button {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
 }
