@@ -11,3 +11,18 @@ Update a Book: Edit details of an existing book.
 Delete a Book: Remove a book from the library records.
 
 
+## Requirements
+
+To run the application, ensure you have the following installed:
+
+- **Backend**:
+  - [.NET SDK (v6.0 or later)](https://dotnet.microsoft.com/download/dotnet)
+  - SQLite
+- **Frontend**:
+  - [Node.js (v16 or later)](https://nodejs.org/)
+  - npm or yarn
+
+---
+
+## Setup Instructions
+### Clone the Repository
